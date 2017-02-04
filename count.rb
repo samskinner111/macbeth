@@ -1,7 +1,5 @@
 word_count = {}
-file = File.open("macbeth.txt", "r") 
-
-file.each_line do |line|
+file = File.readlines("macbeth.txt", "r").each do |line|
   words = line.scan(/\w+/) 
   words.each do |word|
     if word.length > 4
